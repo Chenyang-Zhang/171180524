@@ -1,7 +1,7 @@
 #include"test.h"
 #include<stdio.h>
 
-int add(int a, int b, int c)
+int add(int a, int b, int c)  %add 
 {
 	int result = 0;
 	printf("%s", "Please enter the number:");
