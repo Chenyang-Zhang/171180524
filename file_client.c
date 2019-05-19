@@ -85,16 +85,15 @@ file_client(const char *ip, const char *path)
     close(skfd);
 }
  
-int
-main(int argc, char **argv)
+int main()
 {
-    if( argc < 3 ) {
-        printf("file client: argument error!\n");
-        printf("file_client 192.168.1.10 /tmp/temp\n");
-        return -1;
-    }
- 
-    file_client(argv[1], argv[2]);
+	char ip[100], file_name[100];
+	printf("Please input the IP of the server:");
+	scanf("%s", ip);
+	printf("\n");
+	printf("Please input the file_name:");
+	scanf("%s", file_name);
+	file_client(ip, file_name);
  
     return 0;
 }

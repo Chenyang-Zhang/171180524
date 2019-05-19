@@ -115,16 +115,17 @@ file_server(const char *path)
     close(skfd);
 }
  
-int
-main(int argc, char **argv)
+int main()
 {
-    if( argc < 2 ) {
-        printf("file server: argument error!\n");
-        printf("file_server /tmp/temp\n");
-        return -1;
-    }
- 
-    file_server(argv[1]);
- 
+    char file_name[100];
+    printf("Please input the file name for transfer:");
+    scanf("%s", file_name);
+    file_server(file_name);
+          //memset(sendbuf,0,sizeof(sendbuf));
+          //strcpy(sendbuf,"Please input the file name for transfer:");
+	  //send(fd,sendbuf,strlen(sendbuf),0);
+	  //memset(recvbuf,0,sizeof(recvbuf));
+	  //recv(fd,recvbuf,sizeof(recvbuf),0);
+
     return 0;
 }
